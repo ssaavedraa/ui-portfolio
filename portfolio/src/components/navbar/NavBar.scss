@@ -1,0 +1,84 @@
+@import '../../variables.scss';
+
+.nav-bar{
+    position: sticky;
+    top: 0;
+    background-color: $background;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    color: $text;
+    font-family: $font-text;
+
+    @media (max-width: $mobile) {
+        height: 10vh;
+    }
+
+    img{
+        width: 15vw;
+        height: auto;
+        @media (max-width: $mobile) {
+            width: 50vw;
+        }
+    }
+
+    .menu-icon{
+        display: none;
+    }
+
+    @media (max-width: $mobile) {
+        .menu-icon{
+            display: block;
+            font-size: 2rem;
+            margin-right: 1rem;
+        }
+        .menu-icon:hover{
+            cursor: pointer;
+        }
+    }
+
+    .menu{
+        display: flex;
+        position: relative;
+
+        a{
+            color: $text;
+            text-decoration: none;
+        }
+
+        @media (max-width: $mobile) {
+            position: absolute;
+            top: 10vh;
+            left: 0;
+            height: 90vh;
+            background-color: $background;
+            width: 40vw;
+            display: flex;
+            flex-direction: column;
+            transition: all 1s ease-in-out;
+        }
+
+        .nav-link{
+            list-style: none;
+            padding: 1rem;
+            font-size: 20px;
+
+            @media (max-width: $tablet) {
+                font-size: 18px;
+            }
+
+            @media (max-width: $mobile) {
+                font-size: 16px;
+            }
+        }
+
+    }
+
+    @media (max-width: $mobile) {
+        .menu.hidden{
+            transform: translateX(-100%);
+        }
+    }
+}
