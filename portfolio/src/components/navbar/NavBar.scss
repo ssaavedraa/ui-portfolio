@@ -2,6 +2,7 @@
 
 .nav-bar{
     position: sticky;
+    z-index: 10000;
     top: 0;
     background-color: $background;
     width: 100vw;
