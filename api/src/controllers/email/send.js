@@ -4,8 +4,6 @@ const send = async (req, res) => {
 
     const {sender, fullName, message, phone} = req.body
 
-    console.log(req.body)
-
     try {
         emailSender(sender, fullName, message, phone)
             .then(res.json({

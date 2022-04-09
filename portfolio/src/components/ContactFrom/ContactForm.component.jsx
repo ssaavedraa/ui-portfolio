@@ -16,7 +16,6 @@ export default function ContactForm() {
         setFormData(email => {
             return {...email, [e.target.id]: e.target.value}
         })
-        console.log(formData)
     }
 
     const handleSubmit = async (e) => {
