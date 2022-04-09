@@ -2,10 +2,12 @@ const emailSender = require("../../nodemailer/contactMail/sendMail")
 
 const send = async (req, res) => {
 
-    const {sender, subject, message} = req.body
+    const {sender, fullName, message} = req.body
+
+    console.log(req.body)
 
     try {
-        emailSender(sender, name, message)
+        emailSender(sender, fullName, message)
             .then(res.json({
                 status: 'OK',
                 message: `Email sent`

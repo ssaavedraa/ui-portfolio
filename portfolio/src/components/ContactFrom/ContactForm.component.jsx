@@ -13,16 +13,18 @@ export default function ContactForm() {
     })
 
     const handleChange = (e) => {
-        setFormData(user => {
-            return {...ContactForm, [e.target.id]: e.target.value}
+        setFormData(email => {
+            return {...email, [e.target.id]: e.target.value}
         })
+        console.log(formData)
     }
 
     const handleSubmit = async (e) => {
+        console.log(formData)
         e.preventDefault()
-        const response = await axios.post('https://ssaavedraa.herokuapp.com/email/send',{
+        const response = await axios.post('http://localhost:3001/email/send',{
             sender: formData.email,
-            name: formData.name,
+            fullName: formData.name,
             message: formData.message
         })
         console.log(response)
