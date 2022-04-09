@@ -25,22 +25,22 @@ export default function NavBar(){
             </NavLink>
             <GiHamburgerMenu className='menu-icon' onClick={() => handleShowMenu()}/>
             <ul className="menu hidden" id='menu'>
-                <NavLink to=''>
+                <NavLink to='/'>
                     <li className="nav-link">Home</li>
                 </NavLink>
-                <NavLink to=''>
+                <NavLink to='/about'>
                     <li className="nav-link">About me</li>
                 </NavLink>
-                <NavLink to=''>
+                <NavLink to='/projects'>
                     <li className="nav-link">My projects</li>
                 </NavLink>
-                <NavLink to=''>
+                <NavLink to='/education'>
                     <li className="nav-link">Education</li>
                 </NavLink>
-                <NavLink to=''>
+                <NavLink to='/skills'>
                     <li className="nav-link">Skills</li>
                 </NavLink>
-                <NavLink to=''>
+                <NavLink to='/contact'>
                     <li className="nav-link">Contact</li>
                 </NavLink>
             </ul>

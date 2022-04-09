@@ -2,11 +2,11 @@ const transporter = require('../transporter')
 
 const {USER} = process.env
 
-const emailSender = async (sender, subject, message) => {
+const emailSender = async (sender, name, message) => {
     const mailOptions = {
         replyTo: sender,
         to: USER,
-        subject: subject,
+        subject: `A message from ${name}`,
         text: message
     }
 

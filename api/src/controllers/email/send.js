@@ -5,7 +5,7 @@ const send = async (req, res) => {
     const {sender, subject, message} = req.body
 
     try {
-        emailSender(sender, subject, message)
+        emailSender(sender, name, message)
             .then(res.json({
                 status: 'OK',
                 message: `Email sent`
