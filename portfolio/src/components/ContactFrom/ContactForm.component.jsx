@@ -20,14 +20,13 @@ export default function ContactForm() {
     }
 
     const handleSubmit = async (e) => {
-        console.log(formData)
         e.preventDefault()
         const response = await axios.post('https://ssaavedraa.herokuapp.com/email/send',{
             sender: formData.email,
             fullName: formData.name,
-            message: formData.message
+            message: formData.message,
+            phone: formData.phone
         })
-        console.log(response)
     }
 
     return(
