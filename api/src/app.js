@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require('express')
 const morgan = require('morgan')
 const cors = require('cors')
@@ -20,7 +21,9 @@ server.use((req, res, next) => {
     res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE')
     next()
 })
-server.unsubscribe(cors())
+server.use(cors())
+server.use(express.urlencoded({extended: true}))
+server.use(express.json())
 
 server.use('/', routes)
 
