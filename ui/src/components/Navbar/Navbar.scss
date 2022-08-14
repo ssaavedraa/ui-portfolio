@@ -1,0 +1,15 @@
+@import '../../assets/scss/variables';
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__logo {
+    width: 40vw;
+
+    @media (max-width: $mobile) {
+      width: 45vh;
+    }
+  }
+}

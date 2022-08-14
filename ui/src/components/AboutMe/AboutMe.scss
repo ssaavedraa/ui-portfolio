@@ -1,0 +1,28 @@
+@import '../../assets/scss/variables.scss';
+
+.about-me{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: $mobile) {
+    flex-direction: column;
+  }
+
+  &__thumbnail {
+    width: 50%;
+  }
+
+  .test {
+    max-height: 80vh;
+    overflow-y: scroll;
+  }
+
+  &__profile {
+    margin: 16px;
+    white-space: pre;
+    font-family: monospace;
+    line-height: 1rem;
+  }
+}
+
