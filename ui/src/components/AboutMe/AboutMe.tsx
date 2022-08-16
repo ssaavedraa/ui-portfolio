@@ -1,11 +1,13 @@
 import React from 'react';
 
 import './AboutMe.scss';
+import profilePicture from '../../assets/img/profile.jpg';
+
 export default function AboutMe() {
 
   return (
     <div className="about-me">
-      <img className='about-me__thumbnail' src="https://media-exp1.licdn.com/dms/image/C4E03AQFjB5yByYjW0Q/profile-displayphoto-shrink_800_800/0/1638198711578?e=1666224000&v=beta&t=ZNZPX58tG_K1xxjgMu5-rxg5ovZmfPvRXxr4nlQ0BFo" alt="santiago saavedra profile" />
+      <img className='about-me__thumbnail' src={profilePicture} alt="santiago saavedra profile" />
       <div className='test'>
         <code className='about-me__profile'>{
           `const profile = {\n
