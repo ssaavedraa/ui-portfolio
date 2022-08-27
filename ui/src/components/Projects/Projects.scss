@@ -1,0 +1,11 @@
+@import '../../assets/scss/variables.scss';
+
+.repositories{
+  &__container {
+    display: block;
+    width: 80vw;
+    margin: auto;
+    text-align: center;
+    margin-top: 2rem;
+  }
+}

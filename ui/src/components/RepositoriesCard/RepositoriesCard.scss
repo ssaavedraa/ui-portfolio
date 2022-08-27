@@ -1,0 +1,10 @@
+@import '../../assets/scss/variables.scss';
+
+.card {
+  width: 200px;
+  display: inline-block;
+  border: solid 2px $text;
+  border-radius: 8px;
+  margin: 8px;
+  padding: 4px 16px;
+}

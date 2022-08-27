@@ -20,10 +20,27 @@ body {
   font-size: 26px;
   padding: 0.75rem 1.5rem;
 
-  &--primary{
-    color: white;
+  &--primary {
+    color: $text;
     border-radius: 10px;
-    border: solid white 4px;
+    border: solid $text 4px;
     background-color: transparent;
+  }
+
+  &--icon {
+    svg {
+      border-radius: 4px;
+      color: $text;
+      font-size: 24px;
+      padding: 4px;
+    }
+  }
+
+  &--icon:hover {
+    svg {
+      background-color: $text;
+      color: black;
+      transition: all 0.5s;
+    }
   }
 }
