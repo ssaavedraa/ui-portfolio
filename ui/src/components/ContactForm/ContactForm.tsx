@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useState } from 'react';
+import React, { SyntheticEvent, useState } from 'react';
 
 import './ContactForm.scss';
 
@@ -12,34 +12,37 @@ export default function ContactForm() {
     message: ''
   });
 
+  //TODO fix alert logic and add state types
   const [isAlertVisible, setIsAlertVisible] = useState(false);
   const [alertData, setAlertData] = useState({
     status: '',
     message: ''
   });
+
   const [areEmptyFields, setAreEmptyFields] = useState(true);
   const [isEmailCorrect, setisEmailCorrect] = useState(false);
 
-  const handleChange = (e:any) => {
-    checkInputValues(e);
+  const handleChange = (event: SyntheticEvent): void => {
+    checkInputValues(event);
   };
 
-  const checkInputValues = (e:any) => {
+  const checkInputValues = (event: SyntheticEvent) => {
     const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    const target = event.target as HTMLInputElement;
 
-    if(e.target.value.length > 0) {
-      document.getElementById(e.target.id)?.classList.remove('error');
+    if(target.value.length > 0) {
+      document.getElementById(target.id)?.classList.remove('error');
     }
     else {
-      document.getElementById(e.target.id)?.classList.add('error');
+      document.getElementById(target.id)?.classList.add('error');
     }
 
-    if(e.target.id === 'phone'){
-      if(e.target.value.slice(-1).match(/\d/) || e.target.value === ''){
+    if(target.id === 'phone'){
+      if(target.value.slice(-1).match(/\d/) || target.value === ''){
         setFormData(formData => {
           return {
             ...formData,
-            phone: e.target.value};
+            phone: target.value};
         });
       }
     }
@@ -47,7 +50,7 @@ export default function ContactForm() {
       setFormData(formData => {
         return{
           ...formData,
-          [e.target.id]: e.target.value
+          [target.id]: target.value
         };
       });
       if(formData.email.match(emailRegex)){
@@ -66,8 +69,8 @@ export default function ContactForm() {
     }
   };
 
-  const handleContactByEmail = async(e: any) => {
-    e.preventDefault();
+  const handleContactByEmail = async(event: SyntheticEvent) => {
+    event.preventDefault();
     setIsAlertVisible(true);
     setAlertData({
       status: 'pending',
@@ -92,7 +95,7 @@ export default function ContactForm() {
     });
   };
 
-  const handleContactByWhatsApp = (e: any) => {
+  const handleContactByWhatsApp = (): void => {
     const messageHeader = `A message from: ${formData.name.replace(' ', '%20')} <${formData.email}> %0D%0A`;
     const whatsAppMessage = formData.message.replace('\n', '%0D%0A');
     window.open(`https://api.whatsapp.com/send?phone=573204798303&text=${messageHeader.replace(' ', '%20')}%20${whatsAppMessage.replace(' ', '%20')}`, '_blank');
@@ -113,8 +116,8 @@ export default function ContactForm() {
         <textarea name="message" id="message" cols={30} rows={10} onChange={handleChange} value={formData.message} ></textarea>
         {areEmptyFields && <p className='error'>Please fill all the blanks to continue</p>}
       </form>
-      <button className='btn' onClick={handleContactByEmail} disabled={areEmptyFields && !isEmailCorrect}>Contact by email</button>
-      <button className='btn' disabled={areEmptyFields && !isEmailCorrect} onClick={handleContactByWhatsApp} >Contact using WhatsApp</button>
+      <button className='btn btn--primary' onClick={handleContactByEmail} disabled={areEmptyFields && !isEmailCorrect}>Contact by email</button>
+      <button className='btn btn--primary' disabled={areEmptyFields && !isEmailCorrect} onClick={handleContactByWhatsApp} >Contact using WhatsApp</button>
     </div>
   );
 }

@@ -17,14 +17,17 @@ body {
 
 .btn {
   font-family: $default-font;
-  font-size: 26px;
-  padding: 0.75rem 1.5rem;
+  font-size: 16px;
+  white-space: nowrap;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 10px;
+  margin: 8px;
+  background-color: transparent;
 
   &--primary {
     color: $text;
-    border-radius: 10px;
-    border: solid $text 4px;
-    background-color: transparent;
+    border: solid $text 2px;
   }
 
   &--icon {
@@ -38,9 +41,16 @@ body {
 
   &--icon:hover {
     svg {
+      position: relative;
       background-color: $text;
       color: black;
-      transition: all 0.5s;
+      transition: all 1s;
+      z-index: -3;
     }
   }
+}
+
+.btn:disabled {
+  color: rgba($color: $text, $alpha: 0.3);
+  border: solid rgba($color: $text, $alpha: 0.3) 2px;
 }

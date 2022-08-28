@@ -8,6 +8,7 @@ function getStarredRepositories() {
   return axios.get(url)
     .then(response => response.data)
     .then((repositories: GithubRepository[]) => {
+      //TODO move this logic to the backend
       return repositories.map((repository: any): GithubRepository => {
         return {
           id: repository.id,
