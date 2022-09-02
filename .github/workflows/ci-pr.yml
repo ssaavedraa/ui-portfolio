@@ -50,6 +50,7 @@ jobs:
     permissions:
       pull-requests: write
     steps:
-      - name: Checks passed
+      - uses: hmarr/auto-approve-action@v2
         if: steps.wait-for-build.outputs.conclusion == 'success' && steps.linter-checks.outputs.conclusion == 'success'
-        uses: hmarr/auto-approve-action@v2
+        with:
+          review-message: "Test"
