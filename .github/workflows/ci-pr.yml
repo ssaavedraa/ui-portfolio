@@ -47,6 +47,8 @@ jobs:
   approve:
     runs-on: ubuntu-latest
     needs: [build, lint]
+    permissions:
+      pull-requests: write
     steps:
       - name: Checks passed
         if: steps.wait-for-build.outputs.conclusion == 'success' && steps.linter-checks.outputs.conclusion == 'success'
