@@ -5,12 +5,10 @@ import HomeContainer from './components/HomeContainer/HomeContainer';
 import './App.scss';
 
 function App() {
-  console.log('test');
   return (
     <div className="App">
       <Navbar/>
       <HomeContainer/>
-      <h1>test workflow</h1>
     </div>
   );
 }
