@@ -28,7 +28,7 @@ jobs:
         run: npm run build
 
   lint:
-    run-on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
         with:
