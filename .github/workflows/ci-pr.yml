@@ -50,4 +50,4 @@ jobs:
     steps:
       - name: Checks passed
         if: steps.wait-for-build.outputs.conclusion === 'success' && steps.linter-checks.outputs.conclusion === 'success'
-      - uses: hmarr/auto-approve-action@v2
+        uses: hmarr/auto-approve-action@v2
