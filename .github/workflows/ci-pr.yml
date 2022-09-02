@@ -52,4 +52,4 @@ jobs:
     steps:
       - uses: hmarr/auto-approve-action@v2
         with:
-          review-message: "Test"
+          review-message: "Everything looks fine!"
