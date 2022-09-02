@@ -46,11 +46,11 @@ jobs:
 
   approve:
     runs-on: ubuntu-latest
-    needs: [build, lint]
+    # needs: [build, lint]
     permissions:
       pull-requests: write
     steps:
       - uses: hmarr/auto-approve-action@v2
-        if: steps.wait-for-build.outputs.conclusion == 'success' && steps.linter-checks.outputs.conclusion == 'success'
+        # if: steps.wait-for-build.outputs.conclusion == 'success' && steps.linter-checks.outputs.conclusion == 'success'
         with:
           review-message: "Test"
