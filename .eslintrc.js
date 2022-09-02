@@ -35,7 +35,7 @@ module.exports = {
       'never'
     ],
     'no-console': [
-      'warn',
+      'error',
       {
         allow: [
           'error',
@@ -46,10 +46,6 @@ module.exports = {
     'indent': [
       'error',
       2
-    ],
-    'linebreak-style': [
-      'error',
-      'windows'
     ],
     'quotes': [
       'error',
