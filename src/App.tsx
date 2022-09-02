@@ -5,6 +5,7 @@ import HomeContainer from './components/HomeContainer/HomeContainer';
 import './App.scss';
 
 function App() {
+  console.log('test');
   return (
     <div className="App">
       <Navbar/>

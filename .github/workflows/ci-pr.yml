@@ -51,6 +51,6 @@ jobs:
       pull-requests: write
     steps:
       - uses: hmarr/auto-approve-action@v2
-        if: jobs.build.outputs.conclusion == 'success' && jobs.lint.outputs.conclusion == 'success'
+        # if: jobs.build.outputs.conclusion == 'success' && jobs.lint.outputs.conclusion == 'success'
         with:
           review-message: "Test"
