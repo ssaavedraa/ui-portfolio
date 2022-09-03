@@ -1,21 +1,19 @@
 import axios from 'axios';
-import React, { SyntheticEvent, useState } from 'react';
+import React, { SyntheticEvent, useContext, useState } from 'react';
+import { SnackbarContext } from '../../contexts/SnackbarContext';
+import { SnackbarStatus } from '../../types/Snackbar/snackbarEnum';
 
 import './ContactForm.scss';
 
 export default function ContactForm() {
 
+  const snackbarContext = useContext(SnackbarContext);
+
+  //TODO: Add static typing
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
     email: '',
-    message: ''
-  });
-
-  //TODO fix alert logic and add state types
-  const [isAlertVisible, setIsAlertVisible] = useState(false);
-  const [alertData, setAlertData] = useState({
-    status: '',
     message: ''
   });
 
@@ -71,21 +69,51 @@ export default function ContactForm() {
 
   const handleContactByEmail = async(event: SyntheticEvent) => {
     event.preventDefault();
-    setIsAlertVisible(true);
-    setAlertData({
-      status: 'pending',
-      message: 'Sending email...'
-    });
-    const response = await axios.post('https://ssaavedraa.herokuapp.com/email/send',{
-      sender: formData.email,
-      fullName: formData.name,
+    snackbarContext?.setSnackbarProps(
+      {
+        showSnackbar: true,
+        status: SnackbarStatus.Loading,
+        message: 'Sending email...'
+      }
+    );
+
+    //TODO: Move this requests to a service
+    await axios.post('http://apisantiagosaavedracomco-env.eba-nd88y3pc.us-east-1.elasticbeanstalk.com/api/email/send-contact',{
+      email: formData.email,
+      name: formData.name,
       message: formData.message,
       phone: formData.phone
     });
-    setAlertData(response.data);
+
+    const response = await axios.post('http://apisantiagosaavedracomco-env.eba-nd88y3pc.us-east-1.elasticbeanstalk.com/api/email/send-contact',{
+      email: formData.email,
+      name: formData.name,
+      message: formData.message,
+      phone: formData.phone
+    });
+
+    console.debug(snackbarContext?.snackbarProps.showSnackbar, 1);
+
+    snackbarContext?.setSnackbarProps(
+      {
+        showSnackbar: true,
+        message: response.data,
+        status: SnackbarStatus.Success
+      }
+    );
+    console.debug(snackbarContext?.snackbarProps.showSnackbar, 2);
+
+
     setTimeout(() => {
-      setIsAlertVisible(false);
-    }, 3000);
+      console.debug(snackbarContext?.snackbarProps.showSnackbar, 3);
+      snackbarContext?.setSnackbarProps(
+        {
+          message: response.data,
+          status: SnackbarStatus.Success,
+          showSnackbar: false
+        }
+      );
+    }, 5000);
 
     setFormData({
       name: '',
