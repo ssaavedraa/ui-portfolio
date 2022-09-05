@@ -78,14 +78,14 @@ export default function ContactForm() {
     );
 
     //TODO: Move this requests to a service
-    await axios.post('http://apisantiagosaavedracomco-env.eba-nd88y3pc.us-east-1.elasticbeanstalk.com/api/email/send-contact',{
+    await axios.post('https://api.santiagosaavedra.com.co/api/email/send-confirmation',{
       email: formData.email,
       name: formData.name,
       message: formData.message,
       phone: formData.phone
     });
 
-    const response = await axios.post('http://apisantiagosaavedracomco-env.eba-nd88y3pc.us-east-1.elasticbeanstalk.com/api/email/send-contact',{
+    const response = await axios.post('https://api.santiagosaavedra.com.co/api/email/send-contact',{
       email: formData.email,
       name: formData.name,
       message: formData.message,
