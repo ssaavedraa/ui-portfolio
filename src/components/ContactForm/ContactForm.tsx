@@ -78,21 +78,19 @@ export default function ContactForm() {
     );
 
     //TODO: Move this requests to a service
-    await axios.post('http://apisantiagosaavedracomco-env.eba-nd88y3pc.us-east-1.elasticbeanstalk.com/api/email/send-contact',{
+    await axios.post('https://api.santiagosaavedra.com.co/api/email/send-confirmation',{
       email: formData.email,
       name: formData.name,
       message: formData.message,
       phone: formData.phone
     });
 
-    const response = await axios.post('http://apisantiagosaavedracomco-env.eba-nd88y3pc.us-east-1.elasticbeanstalk.com/api/email/send-contact',{
+    const response = await axios.post('https://api.santiagosaavedra.com.co/api/email/send-contact',{
       email: formData.email,
       name: formData.name,
       message: formData.message,
       phone: formData.phone
     });
-
-    console.debug(snackbarContext?.snackbarProps.showSnackbar, 1);
 
     snackbarContext?.setSnackbarProps(
       {
@@ -101,11 +99,8 @@ export default function ContactForm() {
         status: SnackbarStatus.Success
       }
     );
-    console.debug(snackbarContext?.snackbarProps.showSnackbar, 2);
-
 
     setTimeout(() => {
-      console.debug(snackbarContext?.snackbarProps.showSnackbar, 3);
       snackbarContext?.setSnackbarProps(
         {
           message: response.data,
@@ -113,7 +108,7 @@ export default function ContactForm() {
           showSnackbar: false
         }
       );
-    }, 5000);
+    }, 4000);
 
     setFormData({
       name: '',
