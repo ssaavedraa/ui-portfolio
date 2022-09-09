@@ -9,7 +9,10 @@ export default function Projects() {
 
   useEffect(() => {
     GithubService.getStarredRepositories()
-      .then((repositories: GithubRepository[]): void => setGithubRepositories(repositories));
+      .then((repositories: any): void => {
+        console.debug(repositories);
+        setGithubRepositories(repositories);
+      });
   }, []);
 
   return (
