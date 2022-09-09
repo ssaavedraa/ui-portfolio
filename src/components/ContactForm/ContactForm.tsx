@@ -78,14 +78,14 @@ export default function ContactForm() {
     );
 
     //TODO: Move this requests to a service
-    await axios.post('https://api.santiagosaavedra.com.co/api/email/send-confirmation',{
+    axios.post('/api/email/send-confirmation',{
       email: formData.email,
       name: formData.name,
       message: formData.message,
       phone: formData.phone
     });
 
-    const response = await axios.post('https://api.santiagosaavedra.com.co/api/email/send-contact',{
+    const response = await axios.post('/api/email/send-contact',{
       email: formData.email,
       name: formData.name,
       message: formData.message,
@@ -123,22 +123,29 @@ export default function ContactForm() {
     const whatsAppMessage = formData.message.replace('\n', '%0D%0A');
     window.open(`https://api.whatsapp.com/send?phone=573204798303&text=${messageHeader.replace(' ', '%20')}%20${whatsAppMessage.replace(' ', '%20')}`, '_blank');
   };
+
   return(
     <div className="contact-container">
-      {/* {isAlertVisible && <Alert message={alertData.message} status={alertData.status}/>} */}
       <h1>{'Let\'s get in contact!'}</h1>
+
       <form>
         <label htmlFor="name">Name</label>
         <input type="text" name="name" id="name" onChange={handleChange} value={formData.name} />
+
         <label htmlFor="phone">Phone number</label>
         <input type="text" name="phone" id="phone" onChange={handleChange} value={formData.phone} />
+
         <label htmlFor="email">Email</label>
         <input type="email" name="email" id="email" onChange={handleChange} value={formData.email} />
+
         {!isEmailCorrect && formData.email.length > 0 && <p className="error">Please enter a valid email address</p>}
+
         <label htmlFor="message">Message</label>
         <textarea name="message" id="message" cols={30} rows={10} onChange={handleChange} value={formData.message} ></textarea>
+
         {areEmptyFields && <p className='error'>Please fill all the blanks to continue</p>}
       </form>
+
       <button className='btn btn--primary' onClick={handleContactByEmail} disabled={areEmptyFields && !isEmailCorrect}>Contact by email</button>
       <button className='btn btn--primary' disabled={areEmptyFields && !isEmailCorrect} onClick={handleContactByWhatsApp} >Contact using WhatsApp</button>
     </div>
