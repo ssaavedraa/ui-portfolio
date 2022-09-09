@@ -92,8 +92,6 @@ export default function ContactForm() {
       phone: formData.phone
     });
 
-    console.debug(snackbarContext?.snackbarProps.showSnackbar, 1);
-
     snackbarContext?.setSnackbarProps(
       {
         showSnackbar: true,
@@ -101,11 +99,8 @@ export default function ContactForm() {
         status: SnackbarStatus.Success
       }
     );
-    console.debug(snackbarContext?.snackbarProps.showSnackbar, 2);
-
 
     setTimeout(() => {
-      console.debug(snackbarContext?.snackbarProps.showSnackbar, 3);
       snackbarContext?.setSnackbarProps(
         {
           message: response.data,
@@ -113,7 +108,7 @@ export default function ContactForm() {
           showSnackbar: false
         }
       );
-    }, 5000);
+    }, 4000);
 
     setFormData({
       name: '',
