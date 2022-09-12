@@ -15,7 +15,7 @@ export default function RepositoriesCard(props: {repository: GithubRepository}){
   return (
     <div className='card'>
       <h2>{props.repository.name}</h2>
-      <h3>Language: {props.repository.language}</h3>
+      <h3>Languages: </h3>
       <div className="card__buttons">
         <a className='btn btn--icon' href={props.repository.url} title='Go to repository' target='_blank' rel="noreferrer">
           <MdOpenInNew/>
