@@ -4,7 +4,7 @@ import App from './App';
 import axios from 'axios';
 import reportWebVitals from './reportWebVitals';
 
-axios.defaults.baseURL = process.env.REACT_APP_API || 'http://localhost:3001';
+axios.defaults.baseURL = process.env.REACT_APP_API || 'https://santiagosaavedra.com.co';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

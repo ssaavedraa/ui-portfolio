@@ -78,14 +78,14 @@ export default function ContactForm() {
     );
 
     //TODO: Move this requests to a service
-    axios.post('/api/email/send-confirmation',{
+    axios.post('/email/send-confirmation',{
       email: formData.email,
       name: formData.name,
       message: formData.message,
       phone: formData.phone
     });
 
-    const response = await axios.post('/api/email/send-contact',{
+    const response = await axios.post('/email/send-contact',{
       email: formData.email,
       name: formData.name,
       message: formData.message,
