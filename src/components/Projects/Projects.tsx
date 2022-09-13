@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { GithubRepository } from '../../services/DTOS/GithubRepository';
 import { GithubService } from '../../services/GithubService';
-import RepositoriesCard from '../RepositoriesCard/RepositoriesCard';
+import RepositoryCard from '../RepositoryCard/RepositoryCard';
 import './Projects.scss';
 
 export default function Projects() {
@@ -10,7 +10,6 @@ export default function Projects() {
   useEffect(() => {
     GithubService.getStarredRepositories()
       .then((repositories: any): void => {
-        console.debug(repositories);
         setGithubRepositories(repositories);
       });
   }, []);
@@ -23,7 +22,7 @@ export default function Projects() {
       {
         githubRepositories.map((repository: GithubRepository) => {
           return(
-            <RepositoriesCard key={repository.id} repository={repository}/>
+            <RepositoryCard key={repository.id} repository={repository}/>
           );
         })
       }
