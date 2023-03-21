@@ -66,5 +66,12 @@
     animation: slideRight 1s ease forwards;
     opacity: 1;
     margin: 0 10px;
+    font-size: 18px;
+  }
+
+  .logo {
+    height: 60px;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
   }
 }
