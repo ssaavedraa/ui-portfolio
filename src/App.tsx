@@ -1,21 +1,33 @@
-import React from 'react';
+import { useState } from 'react'
+import { Header } from './components/Header/Header'
+import { Home } from './components/Home/Home'
+import { Maintenance } from './components/Maintenance/Maintenance'
+import { ScrollDown } from './components/ScrollDown/ScrollDown'
 
-import Navbar from './components/Navbar/Navbar';
-import HomeContainer from './components/HomeContainer/HomeContainer';
-import './App.scss';
-import Snackbar from './components/Snackbar/Snackbar';
-import SnackbarProvider from './contexts/SnackbarContext';
+function App (): JSX.Element {
+  const [scroll, setScroll] = useState(0)
 
-function App() {
+  const handleScroll = (): void => {
+    setScroll(() => window.scrollY)
+  }
+
+  window.addEventListener('scroll', handleScroll)
+
   return (
     <div className="App">
-      <SnackbarProvider>
-        <Snackbar/>
-        <Navbar/>
-        <HomeContainer/>
-      </SnackbarProvider>
+      <Header/>
+      <Home/>
+      <Maintenance id='about'/>
+      <Maintenance id='skills'/>
+      <Maintenance id='portfolio'/>
+      <Maintenance id='contact'/>
+      {/* <About/>
+      <Skills/>
+      <Portfolio/>
+      <Contact/> */}
+      {scroll < (window.innerHeight * 0.3) && <ScrollDown/>}
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
