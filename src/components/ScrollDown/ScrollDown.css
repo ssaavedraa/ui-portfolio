@@ -1,0 +1,17 @@
+.scrolldown {
+  position: sticky;
+  bottom: 0;
+  font-size: 60px;
+  width: 100vw;
+  background: transparent;
+  text-align: center;
+  opacity: 0;
+  animation: slideTop 1s ease forwards;
+  animation-delay: 2s;
+}
+
+.scrolldown p {
+  transform: translateY(-10px);
+  animation: jump 4s ease infinite;
+  margin: 0;
+}

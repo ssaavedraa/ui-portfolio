@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: #1f242d;
+  color: white;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #1f242d;
+}
+
+body::-webkit-scrollbar {
+  width: 6px;
+  background-color: #1f242d;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 238, 255, 0.555);
+  border-radius: 6px;
+}
