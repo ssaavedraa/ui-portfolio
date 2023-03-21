@@ -16,10 +16,10 @@ export function Home (): JSX.Element {
         <h3>And I&apos;m a <TypedComponent words={typedWords}/></h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         <div className="social-media">
-          <a href="#" style={styleVariables('index')}>
+          <a href="https://github.com/ssaavedraa" style={styleVariables('index')}>
             <i className='bx bxl-github'></i>
           </a>
-          <a href="#" style={styleVariables('index')}>
+          <a href="https://www.linkedin.com/in/ssaavedraa" style={styleVariables('index')}>
             <i className='bx bxl-linkedin' ></i>
           </a>
         </div>
