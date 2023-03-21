@@ -7,7 +7,7 @@
     "dev": "vite --host",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "deploy": "npm run build && aws s3 sync build/ s3://santiagosaavedra.com.co --acl public-read"
+    "deploy": "npm run build && aws s3 sync dist/ s3://santiagosaavedra.com.co"
   },
   "dependencies": {
     "react": "^18.2.0",
