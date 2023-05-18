@@ -16,10 +16,8 @@ export function Contact (): JSX.Element {
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         <div className="social-media">
           <a href="#" style={styleVariables('index')}>
-            <i className='bx bxl-github'></i>
           </a>
           <a href="#" style={styleVariables('index')}>
-            <i className='bx bxl-linkedin' ></i>
           </a>
         </div>
         <button className='btn'>Download CV</button>
