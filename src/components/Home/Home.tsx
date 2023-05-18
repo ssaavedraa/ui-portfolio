@@ -1,4 +1,4 @@
-import profilePicture from '../../assets/profile.png'
+import profilePicture from '../../assets/profile.webp'
 import { styleVariables } from '../../utils/styleVariables'
 import { TypedComponent } from '../Typed/TypedComponent'
 import { AiOutlineGithub } from 'react-icons/ai'
