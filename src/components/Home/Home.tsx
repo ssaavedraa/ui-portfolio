@@ -1,6 +1,6 @@
 import profilePicture from '../../assets/profile.webp'
 import { styleVariables } from '../../utils/styleVariables'
-import { TypedComponent } from '../Typed/TypedComponent'
+import { TypedComponent } from './Typed/TypedComponent'
 import { AiOutlineGithub } from 'react-icons/ai'
 import { ImLinkedin2 } from 'react-icons/im'
 import './Home.css'
@@ -18,10 +18,10 @@ export function Home (): JSX.Element {
         <h3>And I&apos;m a <TypedComponent words={typedWords}/></h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         <div className="social-media">
-          <a href="https://github.com/ssaavedraa" style={styleVariables('index')}>
+          <a href="https://github.com/ssaavedraa" style={styleVariables('index')} aria-label='Github'>
             <AiOutlineGithub />
           </a>
-          <a href="https://www.linkedin.com/in/ssaavedraa" style={styleVariables('index')}>
+          <a href="https://www.linkedin.com/in/ssaavedraa" style={styleVariables('index')} aria-label='LinkedIn'>
             <ImLinkedin2 />
           </a>
         </div>
