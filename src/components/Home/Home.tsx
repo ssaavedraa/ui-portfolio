@@ -14,7 +14,7 @@ export function Home (): JSX.Element {
     <section className="home" id='home'>
       <div className="home-content">
         <h3>Hello, it&apos;s me</h3>
-        <h1>Santiago Saavedra A.</h1>
+        <h3 className='name'>Santiago Saavedra A.</h3>
         <h3>And I&apos;m a <TypedComponent words={typedWords}/></h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         <div className="social-media">

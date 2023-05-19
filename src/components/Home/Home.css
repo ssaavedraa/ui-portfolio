@@ -14,7 +14,7 @@
   max-width: 40vw;
 }
 
-.home-content h1 {
+.home-content .name {
   font-size: 50px;
   font-weight: 700;
   margin: 0.5rem 0;
@@ -125,7 +125,7 @@
     margin-bottom: 16px;
   }
 
-  .home-content h1 {
+  .home-content .name {
     font-size: 36px;
   }
 
