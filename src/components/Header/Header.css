@@ -22,6 +22,7 @@
 
 .logo {
   height: 90px;
+  width: auto;
   opacity: 0;
   animation: slideRight 1s ease forwards;
 }
