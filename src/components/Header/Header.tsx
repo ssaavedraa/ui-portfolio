@@ -42,7 +42,7 @@ export function Header (): JSX.Element {
   return (
     <header className={`${navbarBackground ? 'header' : 'header transparent'}`}>
       <a href="#">
-        <img src={logo} alt="santiago-saavedra-logo" className="logo"/>
+        <img src={logo} alt="santiago-saavedra-logo" className="logo" width={300} height={102}/>
       </a>
 
       <nav className="navbar">

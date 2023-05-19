@@ -28,7 +28,7 @@ export function Home (): JSX.Element {
         <button className='btn'>Download CV</button>
       </div>
       <div className="home-img">
-        <img src={profilePicture} alt="profile-picture" />
+        <img src={profilePicture} alt="profile-picture" width={433} height={577}/>
       </div>
     </section>
   )
