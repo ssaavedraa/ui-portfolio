@@ -53,6 +53,7 @@
 .home-img img{
   position: absolute;
   height: 90vh;
+  width: auto;
   filter: drop-shadow(0 -18px 15px #0ef);
   opacity: 0;
   animation: slideLeft 1s ease forwards;
