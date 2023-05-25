@@ -6,10 +6,10 @@ import './Header.css'
 export function Header (): JSX.Element {
   const navBarItems = [
     'Home',
-    'About',
-    'Skills',
-    'Portfolio',
-    'Contact'
+    'About'
+    // 'Skills',
+    // 'Portfolio',
+    // 'Contact'
   ]
   const sections = document.querySelectorAll('section')
   const navLinks = document.querySelectorAll('.navbar a')
