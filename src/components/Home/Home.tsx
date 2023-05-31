@@ -3,6 +3,7 @@ import { styleVariables } from '../../utils/styleVariables'
 import { TypedComponent } from './Typed/TypedComponent'
 import { AiOutlineGithub } from 'react-icons/ai'
 import { ImLinkedin2 } from 'react-icons/im'
+import CV from '../../assets/CV.pdf'
 import './Home.css'
 
 export function Home (): JSX.Element {
@@ -16,16 +17,18 @@ export function Home (): JSX.Element {
         <h3>Hello, it&apos;s me</h3>
         <h3 className='name'>Santiago Saavedra A.</h3>
         <h3>And I&apos;m a <TypedComponent words={typedWords}/></h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p>Welcome to Santiago Saavedra&apos;s digital domain! Prepare to be enthralled by the captivating portfolio of a multi-talented creative mind. Santiago Saavedra&apos;s website is a testament to his passion and expertise in web development.</p>
         <div className="social-media">
-          <a href="https://github.com/ssaavedraa" style={styleVariables('index')} aria-label='Github'>
+          <a href="https://github.com/ssaavedraa" style={styleVariables('index')} aria-label='Github' target='_blank' rel='noreferrer'>
             <AiOutlineGithub />
           </a>
-          <a href="https://www.linkedin.com/in/ssaavedraa" style={styleVariables('index')} aria-label='LinkedIn'>
+          <a href="https://www.linkedin.com/in/ssaavedraa" style={styleVariables('index')} aria-label='LinkedIn' target='_blank' rel='noreferrer'>
             <ImLinkedin2 />
           </a>
         </div>
-        <button className='btn'>Download CV</button>
+        <a href={CV} download='CV_Santiago_Saavedra' target='_blank' rel='noreferrer' aria-label='DownloadCV' className='btn'>
+          <p>Download CV</p>
+        </a>
       </div>
       <div className="home-img">
         <img src={profilePicture} alt="profile-picture" width={642} height={856}/>
