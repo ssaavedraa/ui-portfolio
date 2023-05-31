@@ -3,6 +3,7 @@ import { Header } from './components/Header/Header'
 import { Home } from './components/Home/Home'
 // import { Maintenance } from './components/Maintenance/Maintenance'
 import { ScrollDown } from './components/ScrollDown/ScrollDown'
+import Contact from './components/Contact/Contact'
 
 function App (): JSX.Element {
   const [scroll, setScroll] = useState(0)
@@ -17,6 +18,7 @@ function App (): JSX.Element {
     <div className="App">
       <Header/>
       <Home/>
+      <Contact />
       {/* <Maintenance id='about'/>
       <Maintenance id='skills'/>
       <Maintenance id='portfolio'/>
