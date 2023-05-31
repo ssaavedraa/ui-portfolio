@@ -16,12 +16,12 @@ export function Home (): JSX.Element {
         <h3>Hello, it&apos;s me</h3>
         <h3 className='name'>Santiago Saavedra A.</h3>
         <h3>And I&apos;m a <TypedComponent words={typedWords}/></h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p>Welcome to Santiago Saavedra&apos;s digital domain! Prepare to be enthralled by the captivating portfolio of a multi-talented creative mind. Santiago Saavedra&apos;s website is a testament to his passion and expertise in web development.</p>
         <div className="social-media">
-          <a href="https://github.com/ssaavedraa" style={styleVariables('index')} aria-label='Github'>
+          <a href="https://github.com/ssaavedraa" style={styleVariables('index')} aria-label='Github' target='_blank' rel='noreferrer'>
             <AiOutlineGithub />
           </a>
-          <a href="https://www.linkedin.com/in/ssaavedraa" style={styleVariables('index')} aria-label='LinkedIn'>
+          <a href="https://www.linkedin.com/in/ssaavedraa" style={styleVariables('index')} aria-label='LinkedIn' target='_blank' rel='noreferrer'>
             <ImLinkedin2 />
           </a>
         </div>
