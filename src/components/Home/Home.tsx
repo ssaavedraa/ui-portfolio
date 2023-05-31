@@ -31,7 +31,7 @@ export function Home (): JSX.Element {
         </a>
       </div>
       <div className="home-img">
-        <img src={profilePicture} alt="profile-picture" width={642} height={856}/>
+        <img className='w-1/2' src={profilePicture} alt="profile-picture" width={642} height={856}/>
       </div>
     </section>
   )
