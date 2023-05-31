@@ -3,6 +3,7 @@ import { styleVariables } from '../../utils/styleVariables'
 import { TypedComponent } from './Typed/TypedComponent'
 import { AiOutlineGithub } from 'react-icons/ai'
 import { ImLinkedin2 } from 'react-icons/im'
+import CV from '../../assets/CV.pdf'
 import './Home.css'
 
 export function Home (): JSX.Element {
@@ -25,7 +26,9 @@ export function Home (): JSX.Element {
             <ImLinkedin2 />
           </a>
         </div>
-        <button className='btn'>Download CV</button>
+        <a href={CV} download='CV_Santiago_Saavedra' target='_blank' rel='noreferrer' aria-label='DownloadCV' className='btn'>
+          <p>Download CV</p>
+        </a>
       </div>
       <div className="home-img">
         <img src={profilePicture} alt="profile-picture" width={642} height={856}/>
