@@ -65,7 +65,7 @@ export default function Contact (): JSX.Element {
     setOpenModal(true)
 
     postFormData(formData).subscribe({
-      next: (response) => {
+      next: (_response) => {
         setModalContent(<Success message={'Message sent successfully!'}></Success>)
         setFormData(formDataInitialState)
       },
@@ -78,6 +78,19 @@ export default function Contact (): JSX.Element {
         }, 1500)
       }
     })
+  }
+
+  const handleWhatsAppContact = (): void => {
+    const encodedName = encodeURIComponent((formData.name.length > 0) ? formData.email : '"name"')
+    const encodedEmail = encodeURIComponent((formData.email.length > 0) ? formData.email : 'your-email')
+    const encodedMessage = encodeURIComponent(formData.message)
+    const { VITE_PHONE_NUMBER } = import.meta.env as Record<string, string>
+
+    const encodedMessageHeader = `Hi Santiago! I'm ${encodedName} <${encodedEmail}>%0D%0A`
+
+    const whatsAppUrl = `https://api.whatsapp.com/send?phone=${VITE_PHONE_NUMBER}&text=${encodedMessageHeader}Message:${encodedMessage}`
+
+    window.open(whatsAppUrl, '_blank')
   }
 
   useEffect(() => {
@@ -130,7 +143,7 @@ export default function Contact (): JSX.Element {
             />
             <SubmitButton
               message='Send WhatsApp message'
-              isButtondisabled={isSubmitButtonDisabled}
+              onClick={handleWhatsAppContact}
             />
           </div>
         </form>
