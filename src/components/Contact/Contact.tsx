@@ -102,7 +102,7 @@ export default function Contact (): JSX.Element {
   return (
     <>
       <div className='w-[80vw] m-auto'>
-        <form className='m-auto flex flex-col items-center' onSubmit={handleFormSubmission}>
+        <form className='m-auto flex flex-col items-center'>
           <InputField
             name='name'
             value={formData.name}
