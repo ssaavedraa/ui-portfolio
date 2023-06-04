@@ -102,7 +102,7 @@ export default function Contact (): JSX.Element {
   return (
     <>
       <div className='w-[80vw] m-auto'>
-        <form className='m-auto flex flex-col items-center' onSubmit={handleFormSubmission}>
+        <form className='m-auto flex flex-col items-center'>
           <InputField
             name='name'
             value={formData.name}
@@ -135,18 +135,18 @@ export default function Contact (): JSX.Element {
             />
             {(formErrors.message != null) && <small className='block pt-2 text-red-500'>{formErrors.message}</small>}
           </div>
-          <div className='my-4 m-auto w-full md:w-1/2 flex  flex-col-reverse md:flex-row flex-nowrap justify-evenly'>
-            <SubmitButton
-              message='Send Email'
-              isButtondisabled={isSubmitButtonDisabled}
-              onClick={handleFormSubmission}
-            />
-            <SubmitButton
-              message='Send WhatsApp message'
-              onClick={handleWhatsAppContact}
-            />
-          </div>
         </form>
+        <div className='my-4 m-auto w-full md:w-1/2 flex  flex-col-reverse md:flex-row flex-nowrap justify-evenly'>
+          <SubmitButton
+            message='Send Email'
+            isButtondisabled={isSubmitButtonDisabled}
+            onClick={handleFormSubmission}
+          />
+          <SubmitButton
+            message='Send WhatsApp message'
+            onClick={handleWhatsAppContact}
+          />
+        </div>
       </div>
       <Modal
         isOpen={openModal}
