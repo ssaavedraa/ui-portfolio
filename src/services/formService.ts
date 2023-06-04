@@ -3,7 +3,7 @@ import { Observable, throwError } from 'rxjs'
 import { catchError } from 'rxjs/internal/operators/catchError'
 import { type FormDataInterface } from '../types/types'
 
-const baseUrl = 'https://api-portfolio-production-0c27.up.railway.app/'
+const { VITE_BACKEND_URL: baseUrl } = import.meta.env as Record<string, string>
 
 export const postFormData = (data: FormDataInterface): Observable<any> => {
   return new Observable((observer) => {
