@@ -102,6 +102,7 @@ export default function Contact (): JSX.Element {
   return (
     <>
       <div className='w-[80vw] m-auto'>
+        <p className='text-6xl my-4 text-center'>Get in contact with me</p>
         <form className='m-auto flex flex-col items-center'>
           <InputField
             name='name'

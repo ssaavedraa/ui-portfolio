@@ -19,10 +19,6 @@ function App (): JSX.Element {
       <Header/>
       <Home/>
       <Contact />
-      {/* <Maintenance id='about'/>
-      <Maintenance id='skills'/>
-      <Maintenance id='portfolio'/>
-      <Maintenance id='contact'/> */}
       {scroll < (window.innerHeight * 0.3) && <ScrollDown/>}
     </div>
   )
