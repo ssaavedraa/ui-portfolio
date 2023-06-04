@@ -81,7 +81,7 @@ export default function Contact (): JSX.Element {
   }
 
   const handleWhatsAppContact = (): void => {
-    const encodedName = encodeURIComponent((formData.name.length > 0) ? formData.email : '"name"')
+    const encodedName = encodeURIComponent((formData.name.length > 0) ? formData.name : '"name"')
     const encodedEmail = encodeURIComponent((formData.email.length > 0) ? formData.email : 'your-email')
     const encodedMessage = encodeURIComponent(formData.message)
     const { VITE_PHONE_NUMBER } = import.meta.env as Record<string, string>
