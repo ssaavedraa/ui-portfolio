@@ -68,11 +68,9 @@ export default function Contact (): JSX.Element {
       next: (response) => {
         setModalContent(<Success message={'Message sent successfully!'}></Success>)
         setFormData(formDataInitialState)
-        console.log('Success', response)
       },
       error: (error) => {
         setModalContent(<Error message={error.message} />)
-        console.error('Error', error.message)
       },
       complete: () => {
         setTimeout(() => {
