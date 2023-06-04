@@ -26,8 +26,15 @@ export function Home (): JSX.Element {
             <ImLinkedin2 />
           </a>
         </div>
-        <a href={CV} download='CV_Santiago_Saavedra' target='_blank' rel='noreferrer' aria-label='DownloadCV' className='btn'>
-          <p>Download CV</p>
+        <a
+          href={CV}
+          download='CV_Santiago_Saavedra'
+          target='_blank'
+          rel='noreferrer'
+          aria-label='DownloadCV'
+          className='btn rounded-lg text-lg font-normal button-shadow'
+        >
+          Download CV
         </a>
       </div>
       <div className="home-img">
