@@ -8,7 +8,7 @@ const { VITE_BACKEND_URL: baseUrl } = import.meta.env as Record<string, string>
 export const postFormData = (data: FormDataInterface): Observable<any> => {
   return new Observable((observer) => {
     axios
-      .post(`${baseUrl}/email/send-contact`, data)
+      .post(`${baseUrl}/email/send`, data)
       .then((response) => {
         observer.next(response.data)
         observer.complete()
