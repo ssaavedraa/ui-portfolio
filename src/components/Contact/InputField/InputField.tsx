@@ -7,7 +7,7 @@ interface InputFieldInterface {
 
 export default function InputField ({ name, value, onChange, errorMessage }: InputFieldInterface): JSX.Element {
   return (
-    <div className='w-full md:w-1/2'>
+    <div className='w-full lg:w-1/2'>
       <label
         className='block mt-4 mb-2 w-full text-xl'
         htmlFor={name}
