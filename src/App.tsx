@@ -4,6 +4,7 @@ import { Home } from './components/Home/Home'
 // import { Maintenance } from './components/Maintenance/Maintenance'
 import { ScrollDown } from './components/ScrollDown/ScrollDown'
 import Contact from './components/Contact/Contact'
+import Projects from './components/Projects/Projects'
 
 function App (): JSX.Element {
   const [scroll, setScroll] = useState(0)
@@ -18,6 +19,7 @@ function App (): JSX.Element {
     <div className="App">
       <Header/>
       <Home/>
+      <Projects />
       <Contact />
       {scroll < (window.innerHeight * 0.3) && <ScrollDown/>}
     </div>

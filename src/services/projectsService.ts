@@ -1,14 +1,12 @@
 import axios from 'axios'
-import { Observable, throwError } from 'rxjs'
-import { catchError } from 'rxjs/internal/operators/catchError'
-import { type FormDataInterface } from '../types/types'
+import { Observable, catchError, throwError } from 'rxjs'
 
 const { VITE_BACKEND_URL: baseUrl } = import.meta.env as Record<string, string>
 
-export const postFormData = (data: FormDataInterface): Observable<any> => {
+export const fetchGithubProjects = (): Observable<any> => {
   return new Observable((observer) => {
     axios
-      .post(`${baseUrl}/email/send`, data)
+      .get(`${baseUrl}/github/starred`)
       .then((response) => {
         observer.next(response.data)
         observer.complete()
@@ -19,7 +17,7 @@ export const postFormData = (data: FormDataInterface): Observable<any> => {
       })
   }).pipe(
     catchError((error) => {
-      console.error('Error while sending message', error.message)
+      console.error('Error retrieving data: ', error.message)
       return throwError(() => error)
     })
   )
