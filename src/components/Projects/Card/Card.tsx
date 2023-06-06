@@ -5,7 +5,7 @@ import './Card.css'
 export default function ProjectCard ({ name, url, languages }: ProjectCardProps, key: number): JSX.Element {
   return (
     <div
-      className='w-full m-4 lg:w-[45%] p-4 rounded-lg lg:m-3 card-shadow scroll overflow-y-auto overflow-x-hidden h-56 bg-[#4948483d] hover:scale-105 hover:cursor-pointer'
+      className='w-[95%] m-2 lg:w-[45%] p-4 rounded-lg lg:m-3 card-shadow scroll overflow-y-auto overflow-x-hidden h-auto md:h-56 bg-[#4948483d] lg4:hover:scale-105 hover:cursor-pointer'
       key={key}
       onClick={() => { window.location.href = url }}
     >

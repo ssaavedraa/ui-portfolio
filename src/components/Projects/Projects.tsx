@@ -28,7 +28,7 @@ export default function Projects (): JSX.Element {
   }, [])
 
   return (
-    <div className='w-[80vw] lg:w-[97%] m-auto'>
+    <div className='w-[95%] lg:w-[97%] m-auto overflow-x-hidden'>
       <p className='text-6xl my-4 text-center'>Projects</p>
       {
         projects.length === 0
@@ -39,7 +39,7 @@ export default function Projects (): JSX.Element {
             </div>
             )
           : (
-            <div className='flex flex-col md:flex-row flex-wrap justify-center overflow-y-auto scroll lg:h-[90vh]'>
+            <div className='m-auto flex flex-col md:flex-row flex-wrap justify-center overflow-y-auto scroll lg:h-[90vh] w-full 2xl:w-[60vw]'>
               {
                 projects.map(({ id, name, url, httpClone, sshClone, languages }) => (
                   <ProjectCard
