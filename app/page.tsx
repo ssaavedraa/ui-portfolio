@@ -11,7 +11,7 @@ export default function Home (): JSX.Element {
   ]
 
   return (
-    <section className="home" id='home'>
+    <section className="relative w-[90vw] max-w-[1920px]" id='home'>
       <div className="home-content">
         <h1>Hello, it&apos;s me</h1>
         <h2 className='name'>Santiago Saavedra A.</h2>
