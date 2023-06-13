@@ -16,11 +16,8 @@ html {
 
 body {
   width: 100vw;
-<<<<<<< HEAD
   height: auto;
-=======
-  height: 100vh;
->>>>>>> a78981e (migration to nextjs)
+  height: auto;
   background: #1f242d;
   color: white;
   overflow-y: auto;
@@ -32,15 +29,7 @@ body {
 }
 
 *::-webkit-scrollbar {
-<<<<<<< HEAD
-<<<<<<<< HEAD:styles/globals.css
-  width: 2px;
-========
   width: 6px;
->>>>>>>> a78981e (migration to nextjs):srcReact/main.css
-=======
-  width: 6px;
->>>>>>> a78981e (migration to nextjs)
   background-color: #1f242d;
 }
 
@@ -51,7 +40,6 @@ body {
 
 .button-shadow {
   box-shadow: inset 0px 0px 15px 3px rgba(177, 243, 255, 0.8), 3px 2px 5px 3px rgba(0, 0, 0, 0.3);
-<<<<<<< HEAD
 }
 
 .blue-shadow {
@@ -60,6 +48,4 @@ body {
 
 .card-shadow {
   box-shadow: inset 0px 0px 40px 2px rgba(115, 123, 139, 0.2), 3px 2px 5px 3px rgba(0, 0, 0, 0.3);
-=======
->>>>>>> a78981e (migration to nextjs)
 }
