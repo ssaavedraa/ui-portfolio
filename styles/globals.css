@@ -44,3 +44,7 @@ body {
 .blue-shadow {
   filter: drop-shadow(-2px 0px 8px #0ef);
 }
+
+.card-shadow {
+  box-shadow: inset 0px 0px 40px 2px rgba(115, 123, 139, 0.2), 3px 2px 5px 3px rgba(0, 0, 0, 0.3);
+}

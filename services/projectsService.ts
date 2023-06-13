@@ -10,7 +10,11 @@ export interface GithubProject {
 }
 
 export async function fetchGithubProjects (): Promise<GithubProject[]> {
-  const response = await fetch(`${BACKEND_URL}/github/starred`, { cache: 'no-store'})
+  try {
+    const response = await fetch(`${BACKEND_URL}/github/starred`, { cache: 'no-store'})
 
-  return response.json()
+    return response.json()
+  } catch (error) {
+    console.error(error)
+  }
 }
