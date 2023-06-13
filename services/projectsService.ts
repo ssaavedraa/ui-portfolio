@@ -16,5 +16,6 @@ export async function fetchGithubProjects (): Promise<GithubProject[]> {
     return response.json()
   } catch (error) {
     console.error(error)
+    return []
   }
 }
