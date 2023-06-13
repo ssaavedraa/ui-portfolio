@@ -1,5 +1,3 @@
-import axios from 'axios';
-
 const { BACKEND_URL } = process.env
 
 export interface GithubProject {
@@ -12,7 +10,7 @@ export interface GithubProject {
 }
 
 export async function fetchGithubProjects (): Promise<GithubProject[]> {
-  const response = await axios.get<GithubProject[]>(`${BACKEND_URL}/github/starred`)
+  const response = await fetch(`${BACKEND_URL}/github/starred`, { cache: 'no-store'})
 
-  return response.data
+  return response.json()
 }
