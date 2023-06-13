@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100vw;
+  height: auto;
+  height: auto;
+  background: #1f242d;
+  color: white;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: #1f242d;
+}
+
+*::-webkit-scrollbar {
+  width: 2px;
+  background-color: #1f242d;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 238, 255, 0.555);
+  border-radius: 6px;
+}
+
+.button-shadow {
+  box-shadow: inset 0px 0px 15px 3px rgba(177, 243, 255, 0.8), 3px 2px 5px 3px rgba(0, 0, 0, 0.3);
+}
+
+.blue-shadow {
+  filter: drop-shadow(-2px 0px 8px #0ef);
+}
+
+.card-shadow {
+  box-shadow: inset 0px 0px 40px 2px rgba(115, 123, 139, 0.2), 3px 2px 5px 3px rgba(0, 0, 0, 0.3);
+}
