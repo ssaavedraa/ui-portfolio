@@ -6,10 +6,10 @@ import { Header } from './ui/Header/Header'
 
 export const metadata: Metadata = {
   title: 'Santiago Saavedra A. | Fullstack Developer',
-  description: 'Santiago Saavedra: Fullstack Engineer Portfolio - Explore innovative web apps and robust back-end systems. Discover expertise in front-end, back-end, and database management.',
+  description: 'Explore my captivating realm. Download my CV, connect with my networks, and navigate through a dynamic landing page.',
   openGraph: {
     title: 'Santiago Saavedra A. | Fullstack Developer',
-    description: 'Santiago Saavedra: Fullstack Engineer Portfolio - Explore innovative web apps and robust back-end systems. Discover expertise in front-end, back-end, and database management.',
+    description: 'Explore my captivating realm. Download my CV, connect with my networks, and navigate through a dynamic landing page.',
     url: 'https://santiagosaavedra.com.co',
     siteName: 'Santiago Saavedra A.',
     images: [

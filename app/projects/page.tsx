@@ -1,4 +1,6 @@
+import { Metadata } from 'next';
 import { fetchGithubProjects } from '../../services/projectsService';
+import { metadata } from '../layout';
 import ProjectCard from '../ui/ProjectCard/ProjectCard';
 import ProjectCardSkeleton from '../ui/ProjectCard/ProjectCardSkeleton';
 
@@ -31,4 +33,18 @@ export default async function Home () {
       </div>
     </div>
   )
+}
+
+export function generateMetadata (): Metadata {
+  return {
+    ...metadata,
+    title: 'Santiago Saavedra A. | Projects',
+    description: 'Step into my world of creativity and expertise as you explore my diverse portfolio, showcasing impressive projects, innovative designs, and cutting-edge technology.',
+    openGraph: {
+      ...metadata.openGraph,
+      title: '',
+      description: 'Step into my world of creativity and expertise as you explore my diverse portfolio, showcasing impressive projects, innovative designs, and cutting-edge technology.',
+      url: 'https://santiagosaavedra.com.co/projects'
+    }
+  }
 }
