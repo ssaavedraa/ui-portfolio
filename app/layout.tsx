@@ -22,6 +22,7 @@ export const metadata: Metadata = {
     locale: 'en_US',
     type: 'website'
   },
+  
 }
 
 export default function RootLayout({
@@ -31,6 +32,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/favicon.svg" sizes="any" />
+      </head>
       <body>
         <Header />
         {children}
