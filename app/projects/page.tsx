@@ -6,7 +6,7 @@ import ProjectCard from '../ui/ProjectCard/ProjectCard';
 
 export default async function Home () {
   const projects = await fetchGithubProjects()
-  
+
   return (
     <div className='w-[95%] lg:w-[97%] m-auto overflow-x-hidden h-[85vh] mt-[15vh]'>
       <p className='text-6xl my-4 text-center'>Projects</p>
