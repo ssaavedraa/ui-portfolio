@@ -1,5 +1,3 @@
-'use client'
-
 import utilStyles from '../../../styles/utils.module.css'
 
 export interface ProgressBarProps {
