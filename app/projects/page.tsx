@@ -1,11 +1,11 @@
-import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
-import { GithubProject, fetchGithubProjects } from '../../services/projectsService';
+import { fetchGithubProjects } from '../../services/projectsService';
 import ProjectCard from '../ui/ProjectCard/ProjectCard';
 
 
 
 export default async function Home () {
   const projects = await fetchGithubProjects()
+  console.log('🚀 ~ file: page.tsx:8 ~ Home ~ projects:', projects)
 
   return (
     <div className='w-[95%] lg:w-[97%] m-auto overflow-x-hidden h-[85vh] mt-[15vh]'>
