@@ -21,8 +21,6 @@ export default function TypedComponent ({ words }: { words: string[] }): JSX.Ele
   }, [words])
 
   return (
-    <>
-      <span ref={typedElement}/>
-    </>
+      <span className='text-[#0ef]' ref={typedElement}/>
   )
 }
