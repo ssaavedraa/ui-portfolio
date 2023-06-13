@@ -4,6 +4,7 @@ import ProjectCardSkeleton from '../ui/ProjectCard/ProjectCardSkeleton';
 
 export default async function Home () {
   const projects = await fetchGithubProjects()
+  console.log('🚀 ~ file: page.tsx:8 ~ Home ~ projects:', projects)
 
   const skeletonCards = Array(6).fill(0)
 
