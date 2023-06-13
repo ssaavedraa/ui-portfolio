@@ -1,3 +1,5 @@
+'use client'
+
 import ProgressBar from '../ProgressBar/ProgressBar'
 
 interface ProjectCardProps {
