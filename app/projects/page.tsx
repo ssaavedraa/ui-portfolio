@@ -2,8 +2,6 @@ import { fetchGithubProjects } from '../../services/projectsService';
 import ProjectCard from '../ui/ProjectCard/ProjectCard';
 import ProjectCardSkeleton from '../ui/ProjectCard/ProjectCardSkeleton';
 
-
-
 export default async function Home () {
   const projects = await fetchGithubProjects()
 

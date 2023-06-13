@@ -12,12 +12,6 @@ const links = [{
 }, {
   label: 'Projects',
   route: '/projects'
-}, {
-  label: 'About',
-  route: '/about'
-}, {
-  label: 'Contact',
-  route: '/contact'
 }]
 
 export function Header (): JSX.Element {
