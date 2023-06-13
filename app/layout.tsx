@@ -21,7 +21,7 @@ export const metadata: Metadata = {
       }
     ],
     locale: 'en_US',
-    type: 'website'
+    type: 'website',
   },
 }
 
@@ -34,6 +34,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="icon" href="/favicon.svg" sizes="any" />
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src https://*; child-src 'none'; connect-src vitals.vercel-insights.com" />
       </head>
       <body>
         <Header />
