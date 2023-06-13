@@ -11,11 +11,11 @@ export default function Home (): JSX.Element {
   ]
 
   return (
-    <section className="relative w-[70vw] max-w-[1920px] h-[85vh] mt-[15vh] flex justify-center items-center mx-auto overflow-y-hidden" id='home'>
-      <div className="w-1/2">
-        <h1 className='text-[32px] font-bold'>Hello, it&apos;s me</h1>
-        <h2 className='text-[50px] font-bold my-2'>Santiago Saavedra A.</h2>
-        <h3 className='text-[32px] font-bold'>And I&apos;m a <TypedComponent words={typedWords}/></h3>
+    <section className="relative w-full md:w-[70vw] max-w-[1920px] h-[85vh] mt-[15vh] flex justify-center items-center mx-auto overflow-y-hidden" id='home'>
+      <div className="absolute md:relative px-6 md:px-0 pb-6 md:pb-0 w-full bottom-0 md:w-1/2 md:bg-transparent md:rounded-none bg-gradient-to-b from-transparent from-10% via-[#1f242de7] to-[#1f242d]">
+        <h1 className='text-[20px] md:text-[32px] font-bold'>Hello, it&apos;s me</h1>
+        <h2 className='text-[34px] md:text-[50px] font-bold my-2'>Santiago Saavedra A.</h2>
+        <h3 className='text-[20px] md:text-[32px] font-bold'>And I&apos;m a <TypedComponent words={typedWords}/></h3>
         <p className='text-base tracking-normal'>Welcome to my digital domain! Prepare to be enthralled by the captivating portfolio of a multi-talented creative mind. This website is a testament of my <strong className='text-[#0ef]'>passion and expertise</strong> in web development.</p>
         <div className="text-[#0ef] my-6">
           <Link
@@ -48,9 +48,9 @@ export default function Home (): JSX.Element {
           Download CV
         </a>
       </div>
-      <div className="w-auto">
+      <div className="absolute -z-10 top-0 w-full md:w-auto md:relative contrast-[1.17]">
         <Image
-          className='h-[10%] mx-auto transform scale-x-[-1] blue-shadow'
+          className='h-[10%] mx-auto transform md:scale-x-[-1] blue-shadow'
           src='https://s3.amazonaws.com/santiagosaavedra.com.co/profile.webp'
           alt="profile-picture"
           width={485}

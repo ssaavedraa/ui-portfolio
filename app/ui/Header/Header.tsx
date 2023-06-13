@@ -15,8 +15,13 @@ const links = [{
 }, {
   label: 'Projects',
   route: '/projects'
-}
-]
+}, {
+  label: 'About',
+  route: '/about'
+}, {
+  label: 'Contact',
+  route: '/contact'
+}]
 
 export function Header (): JSX.Element {
   // const sections = document.querySelectorAll('section')
@@ -72,7 +77,7 @@ export function Header (): JSX.Element {
   const pathname = usePathname()
 
   return (
-    <header className='fixed top-0 left-0 right-0 items-center justify-around flex w-full lg:w-[80vw] mx-auto h-[15vh]'>
+    <header className='fixed top-0 left-0 right-0 items-center justify-around flex flex-col md:flex-row w-full lg:w-[80vw] mx-auto  h-[15vh]'>
       <Link href={'/'}>
         <Image
           src='https://s3.amazonaws.com/santiagosaavedra.com.co/Firma-02.svg'
@@ -81,8 +86,8 @@ export function Header (): JSX.Element {
           height={90}
         />
       </Link>
-      <nav>
-        <ul>
+      <nav className='block m-auto w-3/4 overflow-x-auto'>
+        <ul className='inline-flex'>
           {
             links.map(({ label, route }) => (
               <NavLink
