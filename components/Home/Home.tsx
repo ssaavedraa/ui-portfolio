@@ -3,7 +3,7 @@ import { styleVariables } from '../../utils/styleVariables'
 import { TypedComponent } from './Typed/TypedComponent'
 import { AiOutlineGithub } from 'react-icons/ai'
 import { ImLinkedin2 } from 'react-icons/im'
-import CV from '../../assets/CV_SANTIAGO_SAAVEDRA_2023.pdf'
+import CV from '../../assets/CV.pdf'
 import './Home.css'
 
 export function Home (): JSX.Element {

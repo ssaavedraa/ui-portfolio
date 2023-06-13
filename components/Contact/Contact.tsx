@@ -118,7 +118,7 @@ export default function Contact (): JSX.Element {
             errorMessage={formErrors.email}
           />
 
-          <div className='w-full lg:w-1/2'>
+          <div className='w-full md:w-1/2'>
             <label
               className='block mt-4 mb-2 w-full text-xl'
               htmlFor="message"
@@ -137,7 +137,7 @@ export default function Contact (): JSX.Element {
             {(formErrors.message != null) && <small className='block pt-2 text-red-500'>{formErrors.message}</small>}
           </div>
         </form>
-        <div className='my-4 m-auto w-full lg:w-1/2 flex  flex-col-reverse md:flex-row flex-nowrap justify-evenly'>
+        <div className='my-4 m-auto w-full md:w-1/2 flex  flex-col-reverse md:flex-row flex-nowrap justify-evenly'>
           <SubmitButton
             message='Send Email'
             isButtondisabled={isSubmitButtonDisabled}
