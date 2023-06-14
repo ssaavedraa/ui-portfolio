@@ -55,6 +55,7 @@ export default function Home (): JSX.Element {
           alt="profile-picture"
           width={485}
           height={856}
+          priority
         />
       </div>
     </section>

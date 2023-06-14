@@ -2,8 +2,6 @@ import { Metadata } from 'next';
 import { fetchGithubProjects } from '../../services/projectsService';
 import { metadata } from '../layout';
 import ProjectCard from '../ui/ProjectCard/ProjectCard';
-import ProjectCardSkeleton from '../ui/ProjectCard/ProjectCardSkeleton';
-import { Suspense } from 'react';
 
 export default async function Projects () {
   const projects = await fetchGithubProjects()
