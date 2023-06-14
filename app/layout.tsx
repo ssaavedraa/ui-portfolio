@@ -4,6 +4,7 @@ import { Analytics } from '@vercel/analytics/react'
 import '../styles/globals.css'
 
 import { Header } from './ui/Header/Header'
+import { URL } from 'url'
 
 export const metadata: Metadata = {
   title: 'Santiago Saavedra A. | Fullstack Developer',
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
     siteName: 'Santiago Saavedra A.',
     images: [
       {
-        url: 'https://i.imgur.com/D04oghv.png',
+        url: '/D04oghv.png',
         width: 800,
         height: 800
       }
@@ -23,6 +24,7 @@ export const metadata: Metadata = {
     locale: 'en_US',
     type: 'website',
   },
+  metadataBase: new URL('https://i.imgur.com')
 }
 
 export default function RootLayout({

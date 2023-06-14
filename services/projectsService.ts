@@ -1,3 +1,6 @@
+import { cache } from 'react'
+import 'server-only'
+
 const { BACKEND_URL } = process.env
 
 export interface GithubProject {
@@ -9,13 +12,13 @@ export interface GithubProject {
   languages: { language: string, percentage: string }[]
 }
 
-export async function fetchGithubProjects (): Promise<GithubProject[]> {
+export const fetchGithubProjects = cache(async (): Promise<GithubProject[]> => {
   try {
-    const response = await fetch(`${BACKEND_URL}/github/starred`, { cache: 'no-store'})
+    const response = await fetch(`${BACKEND_URL}/github/starred`, { cache: 'no-store' })
 
     return response.json()
   } catch (error) {
     console.error(error)
     return []
   }
-}
+})
