@@ -26,6 +26,7 @@ export function Header (): JSX.Element {
           alt='Santiago_Saavedra_Logo'
           width={264}
           height={80}
+          priority
         />
       </Link>
       <nav className='block m-auto w-3/4 overflow-x-auto md:inline md:w-auto md:m-0 overflow-y-hidden'>
