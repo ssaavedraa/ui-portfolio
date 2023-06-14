@@ -7,7 +7,8 @@ const nextConfig = {
         hostname: 's3.amazonaws.com',
         pathname: '/santiagosaavedra.com.co/**'
       }
-    ]
+    ],
+    minimumCacheTTL: 60
   }
 }
 
