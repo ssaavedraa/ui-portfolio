@@ -9,6 +9,9 @@ const nextConfig = {
       }
     ],
     minimumCacheTTL: 60
+  },
+  env: {
+    apiBaseUrl: process.env.BACKEND_URL
   }
 }
 

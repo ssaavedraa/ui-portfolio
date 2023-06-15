@@ -1,7 +1,6 @@
 import { cache } from 'react'
-import 'server-only'
 
-const { BACKEND_URL } = process.env
+const { apiBaseUrl } = process.env
 
 export interface GithubProject {
   id: number
@@ -14,7 +13,7 @@ export interface GithubProject {
 
 export const fetchGithubProjects = cache(async (): Promise<GithubProject[]> => {
   try {
-    const response = await fetch(`${BACKEND_URL}/github/starred`, { cache: 'no-store' })
+    const response = await fetch(`${apiBaseUrl}/github/starred`, { cache: 'no-store' })
 
     return response.json()
   } catch (error) {
