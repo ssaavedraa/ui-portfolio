@@ -54,11 +54,10 @@ export default function Contact () {
     const encodedName = encodeURIComponent((formData.name.length > 0) ? formData.name : '"name"')
     const encodedEmail = encodeURIComponent((formData.email.length > 0) ? formData.email : 'your-email')
     const encodedMessage = encodeURIComponent(formData.message)
-    const { NEXT_PUBLIC_PHONE_NUMBER: phoneNumber } = process.env
 
     const encodedMessageHeader = `Hi Santiago! I'm ${encodedName} <${encodedEmail}>%0D%0A`
 
-    const whatsAppUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessageHeader}Message:${encodedMessage}`
+    const whatsAppUrl = `https://api.whatsapp.com/send?phone=573204798303&text=${encodedMessageHeader}Message:${encodedMessage}`
 
     window.open(whatsAppUrl, '_blank')
   }
