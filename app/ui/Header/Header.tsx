@@ -6,13 +6,18 @@ import { usePathname } from 'next/navigation'
 
 import NavLink from './NavLink'
 
-const links = [{
-  label: 'Home',
-  route: '/'
-}, {
-  label: 'Projects',
-  route: '/projects'
-}]
+const links = [
+  {
+    label: 'Home',
+    route: '/'
+  }, {
+    label: 'Projects',
+    route: '/projects'
+  }, {
+    label: 'Contact',
+    route: '/contact'
+  }
+]
 
 export function Header (): JSX.Element {
   const pathname = usePathname()
