@@ -9,7 +9,7 @@ import useForm from '../ui/hooks/useForm'
 import contactValidationSchema from '../../utils/validations/contactValidationSchema'
 import Modal from '../ui/Modal/Modal'
 import useModal from '../ui/hooks/useModal'
-import { useEffect, useState } from 'react'
+import { FormEvent, useEffect, useState } from 'react'
 import { RequestStatus } from '../../types/types'
 import Spinner from '../ui/Spinner/Spinner'
 
@@ -47,6 +47,21 @@ export default function Contact () {
     openModal,
     closeModal
   })
+
+  const handleWhatsappMessage = (event: FormEvent) => {
+    event.preventDefault()
+
+    const encodedName = encodeURIComponent((formData.name.length > 0) ? formData.name : '"name"')
+    const encodedEmail = encodeURIComponent((formData.email.length > 0) ? formData.email : 'your-email')
+    const encodedMessage = encodeURIComponent(formData.message)
+    const { phoneNumber } = process.env
+
+    const encodedMessageHeader = `Hi Santiago! I'm ${encodedName} <${encodedEmail}>%0D%0A`
+
+    const whatsAppUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessageHeader}Message:${encodedMessage}`
+
+    window.open(whatsAppUrl, '_blank')
+  }
 
   useEffect(() => {
     switch (status) {
@@ -110,6 +125,7 @@ export default function Contact () {
             <Button
               message='Send WhatsApp message'
               backgroundColor='bg-[#25D366]'
+              onClick={handleWhatsappMessage}
             />
           </div>
         </form>

@@ -11,7 +11,8 @@ const nextConfig = {
     minimumCacheTTL: 60
   },
   env: {
-    apiBaseUrl: process.env.BACKEND_URL
+    apiBaseUrl: process.env.BACKEND_URL,
+    phoneNumber: process.env.PHONE_NUMBER
   }
 }
 
