@@ -23,10 +23,10 @@ export function Header (): JSX.Element {
   const pathname = usePathname()
 
   return (
-    <header className='fixed top-0 left-0 right-0 items-center justify-around flex flex-col md:flex-row w-full lg:w-[80vw] mx-auto  h-[15vh]'>
+    <header className='fixed top-0 left-0 right-0 items-center justify-around flex flex-col md:flex-row w-full lg:w-[80vw] mx-auto h-[15vh]'>
       <Link href={'/'} className='h-[60%]'>
         <Image
-          className='h-full'
+          className='h-full min-h-[80px]'
           src='https://s3.amazonaws.com/santiagosaavedra.com.co/Firma-02.svg'
           alt='Santiago_Saavedra_Logo'
           width={264}
