@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const { apiBaseUrl } = process.env
+const { NEXT_PUBLIC_BACKEND_URL: apiBaseUrl } = process.env
 
 export const postFormData = async <FormData>(data: FormData, endpoint: string): Promise<void> => {
   try {
