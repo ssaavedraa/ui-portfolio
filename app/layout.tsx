@@ -37,7 +37,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.svg" sizes="any" />
       </head>
-      <body className='h-screen overflow-y-hidden'>
+      <body className='h-auto overflow-y-auto lg:overflow-y-hidden'>
         <Header />
         {children}
         <Analytics />

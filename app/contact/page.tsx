@@ -81,7 +81,7 @@ export default function Contact () {
 
   return (
     <>
-      <div className='w-[80vw] 2xl:w-[50vw] m-auto h-[85vh] mt-[15vh] overflow-y-auto'>
+      <div className='w-[90vw] 2xl:w-[50vw] m-auto h-[85vh] mt-[15vh] px-3'>
         <form className='m-auto flex flex-col items-center'>
           <InputField
             name='name'

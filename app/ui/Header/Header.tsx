@@ -23,7 +23,7 @@ export function Header (): JSX.Element {
   const pathname = usePathname()
 
   return (
-    <header className='fixed top-0 left-0 right-0 items-center justify-around flex flex-col md:flex-row w-full lg:w-[80vw] mx-auto h-[15vh]'>
+    <header className='fixed top-0 left-0 right-0 items-center justify-around flex flex-col md:flex-row w-full lg:w-[80vw] mx-auto h-[15vh] bg-[#1f242d] z-50'>
       <Link href={'/'} className='h-[60%]'>
         <Image
           className='h-full min-h-[80px]'
