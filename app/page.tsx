@@ -12,7 +12,7 @@ export default function Home (): JSX.Element {
 
   return (
     <section className="relative w-full md:w-[70vw] max-w-[1920px] h-[85vh] mt-[15vh] flex justify-center items-center mx-auto overflow-y-auto lg:overflow-y-hidden" id='home'>
-      <div className="absolute lg:relative px-6 md:px-0 pb-6 md:pb-0 w-full bottom-0 lg:w-1/2 md:bg-transparent md:rounded-none bg-gradient-to-b from-transparent from-10% via-[#1f242de7] to-[#1f242d] h-auto">
+      <div className="absolute xl:relative px-6 md:px-0 pb-6 md:pb-0 w-full bottom-0 lg:w-1/2 md:bg-transparent md:rounded-none bg-gradient-to-b from-transparent from-10% via-[#1f242de7] to-[#1f242d] h-auto">
         <h1 className='text-[20px] md:text-[26px] font-bold'>Hello, it&apos;s me</h1>
         <h2 className='text-[34px] md:text-[40px] font-bold my-2 text-clip'>Santiago Saavedra A.</h2>
         <h3 className='text-[20px] md:text-[26px] font-bold'>And I&apos;m a <TypedComponent words={typedWords}/></h3>
