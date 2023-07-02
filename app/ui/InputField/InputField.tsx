@@ -11,13 +11,13 @@ export default function InputField ({ name, value, onChange, errorMessage }: Inp
   return (
     <div className='w-full lg:w-2/3'>
       <label
-        className='block mt-2 mb-2 w-full text-xl'
+        className='block mt-1 mb-2 w-full text-2xl'
         htmlFor={name}
       >
           {name.charAt(0).toUpperCase() + name.slice(1)}
       </label>
       <input
-        className='w-full py-2 mb-2 px-4 rounded-lg text-black text-lg bg-[#FFFFFF]'
+        className='w-full py-1 mb-2 px-4 rounded-lg text-black text-lg bg-[#FFFFFF]'
         type="text"
         name={name}
         id={name}
