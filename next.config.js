@@ -4,7 +4,7 @@ const nextConfig = {
     return [
       {
         source: '/projects/weather',
-        destination: '/projects'
+        destination: 'https://weather.santiagosaavedra.com.co/'
       }
     ]
   },
