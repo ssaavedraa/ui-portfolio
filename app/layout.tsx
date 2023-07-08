@@ -5,6 +5,7 @@ import '../styles/globals.css'
 
 import { Header } from './ui/Header/Header'
 import { URL } from 'url'
+import Script from 'next/script'
 
 export const metadata: Metadata = {
   title: 'Santiago Saavedra A. | Fullstack Developer',
@@ -37,6 +38,17 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.svg" sizes="any" />
       </head>
+      <Script async strategy='lazyOnload' src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`} />
+      <Script strategy='lazyOnload' id='google-analytics'>
+        {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
+            page_path: window.location.pathname,
+            });
+        `}
+      </Script>
       <body className='h-auto overflow-y-auto lg:overflow-y-hidden'>
         <Header />
         {children}
