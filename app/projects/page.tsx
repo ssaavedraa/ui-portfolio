@@ -12,7 +12,7 @@ export default async function Projects () {
       <p className='text-6xl my-4 text-center'>Projects</p>
       <hr className='w-3/4 border-[1px] border-[#ffffff5d] m-auto'/>
       <p className='text-4xl my-4 text-center'>Deployed Projects</p>
-      <div className='m-auto flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 md:items-stretch md:gap-6 justify-center w-full md:w-[95%] 2xl:w-[80vw]'>
+      <div className='m-auto flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 md:items-stretch md:gap-6 w-full md:w-[95%] 2xl:w-[80vw]'>
         {!deployed.length && <p>No projects found</p>}
         {deployed.map(({ id, name, url, httpClone, sshClone, languages, deployed, deploymentUrl }) => (
           <Link href={(deploymentUrl) as string} key={id} className='inline'>
