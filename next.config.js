@@ -3,8 +3,8 @@ const nextConfig = {
   async rewrites () {
     return [
       {
-        source: '/projects/weather',
-        destination: 'https://weather.santiagosaavedra.com.co/'
+        source: '/api/:path*',
+        destination: 'http://192.168.0.109:3001/:path*'
       }
     ]
   },
