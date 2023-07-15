@@ -16,7 +16,7 @@ interface ProjectCardProps {
 export default function ProjectCard ({ name, url, languages, deployed, deploymentUrl }: ProjectCardProps, key: number): JSX.Element {
   return (
     <div
-      className='w-full overflow-x-clip rounded-lg card-shadow scroll overflow-y-auto h-full bg-[#4948483d] lg4:hover:scale-105 hover:cursor-pointer'
+      className='w-full overflow-clip rounded-lg card-shadow scroll overflow-y-auto h-full bg-[#4948483d] hover:cursor-pointer'
       key={key}
     >
       {deployed && (
