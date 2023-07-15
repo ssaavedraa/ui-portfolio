@@ -9,15 +9,20 @@ export interface GithubProject {
   httpClone: string
   sshClone: string
   languages: { language: string, percentage: string }[]
+  deployed: boolean
+  deploymentUrl?: string
 }
 
-export const fetchGithubProjects = cache(async (): Promise<GithubProject[]> => {
+export const fetchGithubProjects = cache(async (): Promise<{deployed: GithubProject[], notDeployed: GithubProject[] }> => {
   try {
     const response = await fetch(`${BACKEND_URL}/github/starred`, { cache: 'no-store' })
 
     return response.json()
   } catch (error) {
     console.error(error)
-    return []
+    return {
+      deployed: [],
+      notDeployed: []
+    }
   }
 })
